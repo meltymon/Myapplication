@@ -1,8 +1,8 @@
 package com.example.myapplication
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,9 +19,11 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // Set the text of the view holder
         holder.textView.text = "Item $position"
+        holder.imageView.setImageResource(R.drawable.example_image)
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView = view.findViewById<TextView>(R.id.textView)
+        val imageView = view.findViewById<ImageView>(R.id.imageView)
     }
 }
